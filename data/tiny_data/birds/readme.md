@@ -1,0 +1,1 @@
+Take first 282 images from CUB_200_2011 for quick testing.

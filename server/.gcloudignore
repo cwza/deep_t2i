@@ -1,0 +1,6 @@
+.gcloudignore
+.git
+__pycache__/
+.DS_Store
+.vscode/
+.envrc

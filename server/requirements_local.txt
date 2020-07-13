@@ -1,0 +1,4 @@
+torch==1.5.0
+git+https://github.com/cwza/deep_t2i.git
+flask==1.1.0
+google-cloud-storage==1.28.1
