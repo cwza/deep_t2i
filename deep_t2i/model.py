@@ -285,7 +285,7 @@ class SelfAttention(nn.Module):
         self.o = spectral_conv2d(self.ch // 2, self.ch, 1, 1, 0, bias=False)
         # Learnable gain parameter
         self.gamma = nn.Parameter(torch.tensor(0.))
-    def forward(self, x, y=None):
+    def forward(self, x):
         # Apply convs
         theta = self.theta(x)
         phi = F.max_pool2d(self.phi(x), [2,2])

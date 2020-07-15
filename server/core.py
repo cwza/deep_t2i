@@ -68,7 +68,7 @@ def save_to_tmp(img_file):
     " save img_file to ./tmp_jpg/ "
     img = Image.open(img_file)
     fname = f'{uuid.uuid4().hex[:8]}.jpg'
-    path = f'./tmp_jpg/{fname}'
+    path = f'./temp_jpg/{fname}'
     img.save(path)
     return path
 # from deep_t2i.model_anime_heads import ExportedModel

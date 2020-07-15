@@ -185,7 +185,7 @@ class AnimeHeadsTrainer():
             assert dsets.train.tokenizer.vocab_sz==self.vocab_sz and dsets.train.tokenizer.pad_id==self.pad_id
         else:
             self.vocab_sz = dsets.train.tokenizer.vocab_sz
-            self.emb_sz = 24
+            self.emb_sz = 10
             self.pad_id = dsets.train.tokenizer.pad_id
             self.rnn_layers = 2
             self.rnn_drop_p = 0.5
@@ -249,7 +249,7 @@ class BirdsTrainer():
             assert dsets.train.tokenizer.vocab_sz==self.vocab_sz and dsets.train.tokenizer.pad_id==self.pad_id
         else:
             self.vocab_sz = dsets.train.tokenizer.vocab_sz
-            self.emb_sz = 24
+            self.emb_sz = 256
             self.pad_id = dsets.train.tokenizer.pad_id
             self.rnn_layers = 2
             self.rnn_drop_p = 0.5
@@ -335,10 +335,6 @@ def load_checkpoint(self: [AnimeHeadsTrainer, BirdsTrainer], path):
     self.optim_d.load_state_dict(state['optim_d'])
 @patch
 def export(self: [AnimeHeadsTrainer, BirdsTrainer], path, is_ema=True):
-#     assert n_samples <= self.dls.train.batch_size
-#     cap, cap_len, img = iter(self.dls.train).next()
-#     cap = cap[:n_samples]
-#     cap_len = cap_len[:n_samples]
     g_net = self.g_shadow if is_ema else self.g_net
     state = {
         'vocab_sz': self.vocab_sz,
@@ -349,7 +345,6 @@ def export(self: [AnimeHeadsTrainer, BirdsTrainer], path, is_ema=True):
         'noise_sz': self.noise_sz,
         'rnn_encoder': self.rnn_encoder.state_dict(),
         'g_net': g_net.state_dict(),
-#         'samples': (cap, cap_len),
     }
     torch.save(state, path)
 @patch

@@ -1,0 +1,13 @@
+Dockerfile
+README.md
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.git
+.DS_Store
+.vscode/
+
+.envrc
+.dockerignore
+gcloud_service.yaml

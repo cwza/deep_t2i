@@ -2,5 +2,7 @@
 __pycache__/
 
 *.pt
+
 .envrc
-.env.yaml
+.dockerenv
+gcloud_service.yaml

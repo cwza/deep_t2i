@@ -8,10 +8,9 @@
         const submit = () => {
             data = {
                 token: window.token,
-                mode: 'anime_heads',
                 cap: 'white hair yellow eyes',
             }
-            fetch('http://127.0.0.1:5000/entry', {
+            fetch('http://127.0.0.1:5000/anime_heads', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: new Headers({
