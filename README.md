@@ -49,8 +49,8 @@ You can check [birds_results](https://drive.google.com/file/d/1ZtjY0zswy37DDxHV0
 
 ## Pretrained Model
 
-[Exported Anime Face Model](https://drive.google.com/file/d/1yhvhZqJ3kyBTV7fW7N8Zh5n1LDNZafp9/view?usp=sharing)  
-[Exported Birds Model](https://drive.google.com/file/d/1zlh-19h55q9DUWSyhCo46H01nX3hVG__/view?usp=sharing)  
+[Exported Anime Face Model](https://drive.google.com/file/d/1pp696JJCD5ng3C7klhHS5Q7_iTKtEpjs/view?usp=sharing)  
+[Exported Birds Model](https://drive.google.com/file/d/1phNW_utePcz188jDuqRhMYspPXJZNpMT/view?usp=sharing)  
 
 Use inference_anime_heads module to load these exported models.
 
@@ -84,5 +84,6 @@ Use inference_anime_heads module to load these exported models.
     * Download [Birds Captions from AttnGAN](https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ)  and put it to ./data/full_data/birds.zip
     * Download [Simple anime faces data](https://drive.google.com/uc?export=download&id=1tpW7ZVNosXsIAWu8-f5EpwtF3ls3pb79) and put it to ./data/full_data/data.zip
     * Run `python3 ./scripts/birds_data.py`
-* Run ./nbs/99c_Train_Birds_DAMSM.ipynb to train and get DAMSM
-* Run ./nbs/99d_Train_Birds_GAN.ipynb to train get exported model
+* See ./nbs/99c_Train_Birds_DAMSM.ipynb for training DAMSM
+* See ./nbs/99d_Train_Birds_GAN.ipynb for training and getting exported model
+* See ./nbs/05b_inference_birds.ipynb for inference

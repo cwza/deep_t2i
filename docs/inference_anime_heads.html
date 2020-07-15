@@ -133,8 +133,8 @@ returns: img: (64, 64, 3), attn_w: (2, 64, 64)</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># model = Anime_Export(len(tokenizer.vocab), 24, tokenizer.pad_id)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Anime_Export</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="n">exported_model_path</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Anime_Export</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">vocab</span><span class="p">),</span> <span class="mi">24</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_id</span><span class="p">)</span>
+<span class="c1"># model = Anime_Export.from_pretrained(exported_model_path)</span>
 <span class="n">cap</span> <span class="o">=</span> <span class="s1">&#39;white hair yellow eyes&#39;</span>
 <span class="n">img</span><span class="p">,</span> <span class="n">attn_w</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">cap</span><span class="p">)</span>
 <span class="n">test_eq</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
