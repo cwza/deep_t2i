@@ -29,7 +29,10 @@ description: "My Experients of text to image using deep learning"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Generate 256x256 bird image from natural text.</p>
+<ol>
+<li>Generate 256x256 bird image from natural text.</li>
+<li>Generate 64x64 anime faces image from specific tags.</li>
+</ol>
 
 </div>
 </div>
@@ -88,7 +91,7 @@ description: "My Experients of text to image using deep learning"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The architecture design is largely inspired by Attn-GAN, MSG-GAN, SA-GAN and Pro-GAN.</p>
+<p>The architecture design is largely inspired by <a href="https://github.com/taoxugit/AttnGAN">Attn-GAN</a>, <a href="https://github.com/akanimax/BMSG-GAN">MSG-GAN</a>, <a href="https://arxiv.org/abs/1805.08318">SA-GAN</a> and <a href="https://arxiv.org/abs/1710.10196">Pro-GAN</a>.</p>
 
 </div>
 </div>
@@ -99,7 +102,7 @@ description: "My Experients of text to image using deep learning"
 <li>Skip connection from MSG-GAN</li>
 <li>Attention and DAMSM from AttnGAN, </li>
 <li>SelfAtten, Spectral norm, Batch Norm from SAGAN</li>
-<li>Architecture and ema generator from ProGAN but add some residual and attention</li>
+<li>Architecture and running average of the generator weights from ProGAN but add some residual and attention</li>
 </ol>
 
 </div>
@@ -122,14 +125,14 @@ description: "My Experients of text to image using deep learning"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Please check these notebooks which contain the full training process. 
-(<a href="nbs/99c_Train_Birds_DAMSM.ipynb">99a_Train_Anime_Heads_DAMSM.ipynb</a>, <a href="nbs/99d_Train_Birds_GAN.ipynb">99b_Train_Anime_Heads_GAN.ipynb</a>, <a href="nbs/99c_Train_Birds_DAMSM.ipynb">99c_Train_Birds_DAMSM.ipynb</a>, <a href="nbs/99d_Train_Birds_GAN.ipynb">99d_Train_Birds_GAN.ipynb</a> )</p>
+(<a href="nbs/20a_Train_Anime_Heads_DAMSM.ipynb">20a_Train_Anime_Heads_DAMSM.ipynb</a>, <a href="nbs/20b_Train_Anime_Heads_GAN.ipynb">20b_Train_Anime_Heads_GAN.ipynb</a>, <a href="nbs/20c_Train_Birds_DAMSM.ipynb">20c_Train_Birds_DAMSM.ipynb</a>, <a href="nbs/20d_Train_Birds_GAN.ipynb">20d_Train_Birds_GAN.ipynb</a> )</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Selected sample results:
+<p>Notice that for birds dataset, the results are not always good. The followings are which I choosed that looks good.
 {% include image.html height="200" max-width="300" file="/deep_t2i/images/anime_heads_result.jpg" %}
 {% include image.html file="/deep_t2i/images/birds_result.jpg" %}</p>
 
@@ -153,7 +156,7 @@ description: "My Experients of text to image using deep learning"
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="https://drive.google.com/file/d/1pp696JJCD5ng3C7klhHS5Q7_iTKtEpjs/view?usp=sharing">Exported Anime Face Model</a><br>
 <a href="https://drive.google.com/file/d/1phNW_utePcz188jDuqRhMYspPXJZNpMT/view?usp=sharing">Exported Birds Model</a></p>
-<p>Use inference_anime_heads module to load these exported models.</p>
+<p>See <a href="nbs/21a_example_inference.ipynb">21a_example_inference.ipynb</a> for inference example</p>
 
 </div>
 </div>
@@ -167,8 +170,8 @@ description: "My Experients of text to image using deep learning"
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><a href="server">Flask Server</a></li>
-<li><a href="https://github.com/cwza/deep_t2i_web">Demo Site</a></li>
+<li><a href="server">Flask Server</a> that deployed on Google Cloud Run</li>
+<li><a href="https://github.com/cwza/deep_t2i_web">Simple Demo Site</a>: Simple web interface for the flask server</li>
 </ul>
 
 </div>
@@ -189,7 +192,7 @@ description: "My Experients of text to image using deep learning"
 <li>Download <a href="http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz">CUB-200-2011</a> and put it to ./data/full_data/CUB-200-2011.tgz</li>
 <li>Download <a href="https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ">Birds Captions from AttnGAN</a>  and put it to ./data/full_data/birds.zip</li>
 <li>Download <a href="https://drive.google.com/uc?export=download&amp;id=1tpW7ZVNosXsIAWu8-f5EpwtF3ls3pb79">Simple anime faces data</a> and put it to ./data/full_data/data.zip</li>
-<li>Run <code>python3 ./scripts/birds_data.py</code></li>
+<li>Run <code>python3 ./scripts/birds_data.py</code> and <code>python3 ./scripts/anime_heads_data.py</code></li>
 </ul>
 </li>
 <li>Make some change in nbs/xxx.ipynb. You can add documentation in notebooks!!!</li>
@@ -217,12 +220,12 @@ description: "My Experients of text to image using deep learning"
 <li>Download <a href="http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz">CUB-200-2011</a> and put it to ./data/full_data/CUB-200-2011.tgz</li>
 <li>Download <a href="https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ">Birds Captions from AttnGAN</a>  and put it to ./data/full_data/birds.zip</li>
 <li>Download <a href="https://drive.google.com/uc?export=download&amp;id=1tpW7ZVNosXsIAWu8-f5EpwtF3ls3pb79">Simple anime faces data</a> and put it to ./data/full_data/data.zip</li>
-<li>Run <code>python3 ./scripts/birds_data.py</code></li>
+<li>Run <code>python3 ./scripts/birds_data.py</code> and <code>python3 ./scripts/anime_heads_data.py</code></li>
 </ul>
 </li>
-<li>See ./nbs/99c_Train_Birds_DAMSM.ipynb for training DAMSM</li>
-<li>See ./nbs/99d_Train_Birds_GAN.ipynb for training and getting exported model</li>
-<li>See ./nbs/05b_inference_birds.ipynb for inference</li>
+<li>See ./nbs/20c_Train_Birds_DAMSM.ipynb for training DAMSM</li>
+<li>See ./nbs/20d_Train_Birds_GAN.ipynb for training and getting exported model</li>
+<li>See ./nbs/21a_example_inference.ipynb for inference</li>
 </ul>
 
 </div>

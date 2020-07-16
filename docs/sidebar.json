@@ -9,9 +9,10 @@
     "Trainer": "/trainer_GAN",
     "Inference Anime Heads": "/inference_anime_heads",
     "Inference Birds": "/inference_birds",
-    "Anime Heads DAMSM": "/Train_Anime_Heads_DAMSM",
-    "Anime Heads GAN": "/Train_Anime_Heads_GAN",
-    "Birds DAMSM": "/Train_Birds_DAMSM",
-    "Birds GAN": "/Train_Birds_GAN"
+    "Triain Anime Heads DAMSM": "/Train_Anime_Heads_DAMSM",
+    "Train Anime Heads GAN": "/Train_Anime_Heads_GAN",
+    "Train Birds DAMSM": "/Train_Birds_DAMSM",
+    "Train Birds GAN": "/Train_Birds_GAN",
+    "Example Inference": "/example_inference"
   }
 }

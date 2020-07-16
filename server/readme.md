@@ -84,7 +84,7 @@ spec:
         - name: imgur_client_id
           value: []
         - name: is_recaptcha
-          value: 'True'
+          value: ['True' or 'False']
         - name: recaptcha_secret
           value: []
     metadata:
