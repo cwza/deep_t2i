@@ -7,13 +7,12 @@
 
 ## Data
 
-Main data:
-* [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)
-* [Birds Captions from AttnGAN](https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ)
-
-The files with name "anime_heads" are related to another data. Which is a very simple task that try to generate anime faces from just two factors: hair color and eye color. I just use this data to quickly check the functionality of my model. It should work perfectly with this simple task.
-* [Simple anime faces data](https://drive.google.com/uc?export=download&id=1tpW7ZVNosXsIAWu8-f5EpwtF3ls3pb79)
-* This data is from this [course](http://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS18.html) 
+* Birds:
+    + [CUB-200](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html)
+    + [Birds Captions from AttnGAN](https://drive.google.com/open?id=1O_LtUP9sch09QH3s_EBAgLEctBQ5JBSJ)
+* Anime faces
+    + [Simple anime faces data](https://drive.google.com/uc?export=download&id=1tpW7ZVNosXsIAWu8-f5EpwtF3ls3pb79)
+    + This data is from this [course](http://speech.ee.ntu.edu.tw/~tlkagk/courses_MLDS18.html) 
 
 ## Model Architecture
 
