@@ -94,6 +94,7 @@ spec:
 3. Run followings but replace [] by yours.
 ``` sh
 gcloud login
+gcloud auth configure-docker
 docker build -t us.gcr.io/[GCP_PROJECT_ID]/deep_t2i_server .
 docker push us.gcr.io/[GCP_PROJECT_ID]/deep_t2i_server
 gcloud beta run services replace gcloud_service.yaml --region us-central1
