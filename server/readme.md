@@ -70,7 +70,7 @@ spec:
       - image: us.gcr.io/[PROJECT_ID]/deep_t2i_server:latest
         resources:
           limits:
-            cpu: '2'
+            cpu: '1'
             memory: '2G'
         ports:
         - containerPort: 5000
