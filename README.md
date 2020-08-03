@@ -5,6 +5,33 @@
 1. Generate 256x256 bird image from natural text.
 2. Generate 64x64 anime faces image from specific tags.
 
+## Video
+
+```python
+I made a explanation video using chinese:  
+
+[![](http://img.youtube.com/vi/nPzVP1BmRhw/0.jpg)](http://www.youtube.com/watch?v=nPzVP1BmRhw "")
+```
+
+
+      File "<ipython-input-3-83fbffca510c>", line 1
+        I made a explanation video using chinese:
+             ^
+    SyntaxError: invalid syntax
+
+
+
+## Training and Result
+
+Please check these notebooks which contain the full training process. 
+([20a_Train_Anime_Heads_DAMSM.ipynb](nbs/20a_Train_Anime_Heads_DAMSM.ipynb), [20b_Train_Anime_Heads_GAN.ipynb](nbs/20b_Train_Anime_Heads_GAN.ipynb), [20c_Train_Birds_DAMSM.ipynb](nbs/20c_Train_Birds_DAMSM.ipynb), [20d_Train_Birds_GAN.ipynb](nbs/20d_Train_Birds_GAN.ipynb) )
+
+Notice that for birds dataset, the results are not always good. The followings are which I choosed that looks good.
+<img src="nbs/images/anime_heads_result.jpg" width="300" height="200">
+<img src="nbs/images/birds_result.jpg">
+
+You can check [birds_results](https://drive.google.com/file/d/1ZtjY0zswy37DDxHV0JvLhawhthP9ae1M/view?usp=sharing)  or [anime_heads_results](https://drive.google.com/file/d/1PqbnvfK_aha0Pqge16ETLrr7TqNC-xxM/view?usp=sharing) to get the result images during training process for each epoch.
+
 ## Data
 
 * Birds:
@@ -34,17 +61,6 @@ The architecture design is largely inspired by [Attn-GAN](https://github.com/tao
 Please check this notebook to get more details of my model architecture. ( [03a_model.ipynb](nbs/03a_model.ipynb) )
 
 Check these notebooks to get details of the loss and training. ( [04a_trainer_DAMSM.ipynb](nbs/04a_trainer_DAMSM.ipynb), [04b_trainer_GAN.ipynb](nbs/04b_trainer_GAN.ipynb) )
-
-## Training and Result
-
-Please check these notebooks which contain the full training process. 
-([20a_Train_Anime_Heads_DAMSM.ipynb](nbs/20a_Train_Anime_Heads_DAMSM.ipynb), [20b_Train_Anime_Heads_GAN.ipynb](nbs/20b_Train_Anime_Heads_GAN.ipynb), [20c_Train_Birds_DAMSM.ipynb](nbs/20c_Train_Birds_DAMSM.ipynb), [20d_Train_Birds_GAN.ipynb](nbs/20d_Train_Birds_GAN.ipynb) )
-
-Notice that for birds dataset, the results are not always good. The followings are which I choosed that looks good.
-<img src="nbs/images/anime_heads_result.jpg" width="300" height="200">
-<img src="nbs/images/birds_result.jpg">
-
-You can check [birds_results](https://drive.google.com/file/d/1ZtjY0zswy37DDxHV0JvLhawhthP9ae1M/view?usp=sharing)  or [anime_heads_results](https://drive.google.com/file/d/1PqbnvfK_aha0Pqge16ETLrr7TqNC-xxM/view?usp=sharing) to get the result images during training process for each epoch.
 
 ## Pretrained Model
 
