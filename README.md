@@ -7,19 +7,8 @@
 
 ## Video
 
-```python
-I made a explanation video using chinese:  
-
+I made a explanation video using chinese: 
 [![](http://img.youtube.com/vi/nPzVP1BmRhw/0.jpg)](http://www.youtube.com/watch?v=nPzVP1BmRhw "")
-```
-
-
-      File "<ipython-input-3-83fbffca510c>", line 1
-        I made a explanation video using chinese:
-             ^
-    SyntaxError: invalid syntax
-
-
 
 ## Training and Result
 
