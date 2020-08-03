@@ -8,6 +8,7 @@
 ## Video
 
 I made a explanation video using chinese: 
+
 [![](http://img.youtube.com/vi/nPzVP1BmRhw/0.jpg)](http://www.youtube.com/watch?v=nPzVP1BmRhw "")
 
 ## Training and Result
