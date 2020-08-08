@@ -9,7 +9,7 @@
 
 I made a explanation video using chinese: 
 
-[![](http://img.youtube.com/vi/nPzVP1BmRhw/0.jpg)](http://www.youtube.com/watch?v=nPzVP1BmRhw "")
+[![](http://img.youtube.com/vi/W--rd8A1ZsE/0.jpg)](http://www.youtube.com/watch?v=W--rd8A1ZsE "")
 
 ## Training and Result
 
